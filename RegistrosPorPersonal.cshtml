@@ -1,0 +1,41 @@
+﻿@using Datos.Entidades;
+
+@model List<E_RegistroJoin>
+
+@{
+    ViewBag.Title = "RegistrosPorPersonal";
+}
+<h1>Registros</h1>
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-danger">@TempData["error"]</div>
+}
+<a class="btn btn-success" href="/Home/IrAgregarRegistro">Agregar Registro</a>
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>IdRegistro</th>
+            <th>Nombre</th>
+            <th>Acceso</th>
+            <th>Ubicacion</th>
+            <th>FechaHora</th>
+            <th>TipoMovimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdRegistro</td>
+                <td>@item.Nombre</td>
+                <td>@item.Acceso</td>
+                <td>@item.Ubicacion</td>
+                <td>@item.FechaHora</td>
+                <td>@item.TipoMovimiento</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "AgrPersonal";
+}
+
+<h2>AgrPersonal</h2>
+
+<form action="/Home/AgregarPersonal" method="post">
+    <label for="Nombre">Nombre: </label>
+    <input type="text" name="Nombre" />
+    <br />
+
+    <label for="Departamento">Departamento: </label>
+    <input type="text" name="Departamento" />
+    <br />
+    <a href="/Home/Index" class="btn btn-danger">Regresar</a>
+    <input type="submit"  value="agregar" class="btn btn-success" />
+</form>
+
